@@ -38,14 +38,14 @@ export default function Home(){
             <p>Stay updated with the latest innovations and breakthroughs in sustainability.</p>
 
             <ul>
-                <li><Link >15 Eco Friendly Tech Startups in India (2022)</Link></li>
+                <li><Link to={'/highlights'}>15 Eco Friendly Tech Startups in India (2022)</Link></li>
 
-                <li><Link>Renewable Energy and Climate Change</Link></li>
+                <li><Link to={'/highlights'}>Renewable Energy and Climate Change</Link></li>
 
-                <li><Link>Environmental Challenges and Solutions in world</Link></li>
+                <li><Link to={'/highlights'}>Environmental Challenges and Solutions in world</Link></li>
             </ul>
 
-            <Link className="btnExporeMore">Expore More <FaArrowRight /></Link>
+            <Link className="btnExporeMore" to={'/highlights'}>Expore More <FaArrowRight /></Link>
         </div>
         </div>
 

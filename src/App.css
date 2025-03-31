@@ -386,3 +386,42 @@ nav img{
   border-radius: 50px;
   font-size: 18px;
 }
+
+
+/* Highlights Page Styling */
+
+.highlightspage{
+  margin:60px 0;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  align-items: center;
+  padding: 20px;
+}
+.highlights{
+  width: 100%;
+  max-width: 1200px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding:30px 20px;
+  transition: all 300ms;
+}
+.highlights:hover{
+  box-shadow:  0 0 10px gray;
+}
+
+.highlights h3{
+  font-size: 28px;
+}
+
+.highlights h6{
+  font-size: 18px;
+  margin: 5px 0 15px;
+  color: rgb(133, 133, 133);
+}
+
+.highlights p{
+  color: rgb(68, 68, 68);
+  font-size: 20px;
+  line-height: 2em;
+}
