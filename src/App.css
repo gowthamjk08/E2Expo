@@ -135,6 +135,7 @@ nav img{
   display: flex;
   padding: 30px;
   align-items: center;
+  justify-content: center;
   animation: toOverFlow 600ms 1 backwards;
 }
 @keyframes toOverFlow {
