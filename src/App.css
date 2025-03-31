@@ -134,7 +134,6 @@ nav img{
   background-color: rgb(193, 216, 207);
   display: flex;
   padding: 30px;
-  justify-content: space-between;
   align-items: center;
   animation: toOverFlow 600ms 1 backwards;
 }
