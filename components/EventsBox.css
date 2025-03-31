@@ -1,0 +1,96 @@
+.eventsBoxContainer{
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.eventsBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding:40px 30px;
+    background-color:rgb(230, 230, 230);
+    border-radius: 10px;
+}
+.eventsBoxImg{
+    flex-basis: 50%;
+}
+
+.eventsBoxText{
+    flex-basis: 100%
+}
+
+.eventsBoxbtn{
+flex-basis:100%;
+}
+
+.eventsBoxImg img{
+    border-radius:5px;
+    width: 100%;
+    object-fit: contain;
+}
+.eventsBoxContainer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.eventsBoxText h2{
+    font-size: 24px;
+}
+
+.eventsBoxText h3{
+    font-size: 16px;
+    margin: 10px 0 15px;
+}
+.eventsBoxText h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+.eventsBoxText p{
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.eventsBoxText a{
+    font-size: 18px;
+    color: rgb(3, 114, 204);
+}
+
+.eventsbtn button{
+    display: block;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border:none;
+    background-color: rgb(175, 175, 175);
+    transition: all 300ms;
+}
+.eventsBox:hover .eventsbtn button{
+    transform: translateX(10px);
+    color:white;
+}
+
+
+@media screen and (max-width:1000px) {
+    .eventsBoxImg{
+        flex-basis: 60%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .eventsBox{
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+    }
+}
+

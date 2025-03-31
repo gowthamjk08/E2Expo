@@ -1,0 +1,65 @@
+footer{
+    background-color: black;
+    padding: 30px 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+} 
+.footerText{
+    flex-grow: 1;
+    flex-basis:600px;
+}
+
+
+.footerText img{
+    width:150px;
+}
+
+footer p{
+    font-size: 18px;
+    line-height: 2em;
+    margin: 20px 0;
+    color: gray;
+}
+
+footer h3{
+    color: white;
+    font-size: 24px;
+    margin-bottom:20px;
+}
+footer h6{
+    font-size: 20px;
+    color: rgb(192, 192, 192);
+}
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+footer a[href="tel:+91 9811913376"] svg{
+    color: red;
+}
+footer a[href="mailto: e2expo.com"] svg{
+    color: white;
+}
+
+.footerQuickLinks a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.copyWrite{
+    padding:20px 0 15px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: var(--primary);
+}

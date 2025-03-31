@@ -1,0 +1,388 @@
+/* Navigation Bar styling */
+:root{
+  --primary: rgb(1, 84, 87);
+  --textHoverColor: rgb(255, 255, 48);
+}
+
+/* Bootstarp basic style reset */
+ul,p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+nav{
+  display: flex;
+  position: sticky;
+  top: 0%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 10px;
+  background-color: var(--primary);
+  z-index: 1000;
+  animation: slowDown 600ms 1 linear both ;
+}
+
+@keyframes slowDown {
+  0%{
+    transform: translateY(-90px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a{
+  font-size: 18px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition:all 300ms;
+  &:hover{
+    scale: 1.1;
+    color: var(--textHoverColor);
+  }
+}
+
+nav img{
+  height: 60px;
+  cursor: pointer;
+  transition: all 300ms;
+  &:hover{
+    scale: 1.05;
+    filter:drop-shadow(0 0 10px black)
+  }
+}
+
+.navBar{
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.navBar span{
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  border-radius: 100px;
+  transition: all 300ms;
+}
+
+.navBarActive span:nth-child(1){
+  transform: rotate(50deg);
+  transform-origin: left;
+}
+.navBarActive span:nth-child(2){
+  scale: 0;
+}
+.navBarActive span:nth-child(3){
+  transform: rotate(-50deg);
+  transform-origin: left;
+}
+
+
+/* media Query for navigation bar */
+
+
+@media screen and (max-width:630px) {
+  nav ul{
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    top:90px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(1, 84, 87,0.4);
+    backdrop-filter:blur(100px);
+    transition: all 300ms;
+    border-radius: 0 0px 5px 5px;
+    box-shadow:  0px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  .navBar{
+    display: flex;
+  }
+  nav ul li a{
+    color: rgb(157, 244, 250);
+  }
+  nav ul li a:hover{
+    color: white;
+    scale: 1;
+    transform: translateX(10px);
+  }
+  .navBarActive+ul{
+    height: 260px;
+    padding: 30px 40px;
+  }
+
+}
+
+
+
+/* Home Page Styling  */
+
+.homePage{
+  min-height: calc(100vh - 90px);
+  background-color: rgb(193, 216, 207);
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  animation: toOverFlow 600ms 1 backwards;
+}
+@keyframes toOverFlow {
+  0%{
+    overflow: hidden;
+  }
+  100%{
+    overflow: auto;
+  }
+}
+
+.homePageText{
+  flex-basis: 100%;
+  animation: slowUp 600ms 1 linear both ;
+}
+
+@keyframes slowUp {
+  0%{
+    transform: translateY(100px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+.homePageImg{
+  flex-basis: 60%;
+  text-align: center;
+}
+
+
+.homePageText h1{
+  font-size:4em;
+  font-weight: 600;
+}
+
+.homePageText h3{
+  margin-top: 40px;
+  font-size: 2em;
+  color: var(--primary);
+}
+
+.homePageImg img{
+  width: 60%;  
+}
+
+/* Home page (hero) section media Query  */
+
+@media screen and (max-width:1000px){
+  .homePageText h1{
+    font-size:3.5em;
+  }
+  
+  .homePageText h3{
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width:800px){
+  .homePageText h1{
+    font-size:3em;
+  }
+  
+  .homePageText h3{
+    font-size: 1em;
+  }
+
+  .homePageImg img{
+    width: 80%;  
+  }
+}
+
+@media screen and (max-width:630px){
+  .homePageText h1{
+    font-size:2em;
+  }
+  
+  .homePageText h3{
+    font-size: 1em;
+  }
+
+  .homePageImg img{
+    width: 100%;  
+  }
+}
+
+@media screen and (max-width:540px){
+  .homePage{
+    flex-direction: column;
+    gap:20px;
+  }
+}
+
+/* Aims box that in side in the home page */
+
+.aimsBox{
+  margin:50px auto 80px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border-radius:5px;
+  background-color: rgb(0, 80, 60);
+  color: white;
+  padding: 30px;
+  line-height: 2em;
+  transition: all 300ms;
+  position: relative;
+  cursor: pointer;
+}
+.aimsBox:hover{
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;  
+}
+
+.aimsBox::after{
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background:linear-gradient(-60deg, rgba(255, 255, 255,0.5) 1%,rgba(1, 114, 48, 0.473) 100%) ;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: -40px;
+  left:-40px;
+  z-index: -1;
+  scale: 0;
+  transition: all 300ms;
+}
+
+.aimsBox::before{
+  content: "";
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  background:linear-gradient(90deg, rgba(255, 255, 255,0.5) 1%,rgba(1, 114, 48, 0.473) 100%) ;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  bottom: -50px;
+  right:-60px;
+  scale: 0;
+  transition: all 300ms;
+  /* z-index: -1; */
+}
+.aimsBox:hover::after,
+.aimsBox:hover::before{
+  scale: 1;
+}
+
+
+
+.aimsBox svg{
+  font-size: 50px;
+  margin-bottom:30px;
+  animation: upAndDown 1s infinite linear alternate-reverse;
+}
+.aimsBox:hover svg{
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes upAndDown {
+  0%{
+    transform: translateY(-10px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(10px);
+  }
+}
+
+
+@keyframes rotate {
+  0%{
+    rotate: 0deg;
+  }
+  100%{
+    rotate: 360deg;
+  }
+}
+
+/* Media Query for Aims Box */
+@media screen and (max-width:530px) {
+  .aimsBox{
+    width: calc(100% - 20px);
+    margin: 30px auto;
+    padding: 30px 10px;
+    font-size:20px;
+  }
+  .aimsBox::after,
+  .aimsBox::before{
+    display: none;
+  }
+}
+
+
+/* Home highLights styling */
+
+
+.highlightsContainer{
+  padding:0 10px;
+  margin: 60px auto 30px;
+  max-width:500px;
+  width: 100%;
+  /* background-color: red; */
+}
+.homeHighlights{
+  box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.4);
+  padding:40px 30px;
+  border-radius: 10px;
+  transition: all 300ms;
+}
+
+.homeHighlights:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px black;
+}
+
+.homeHighlights h1{
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+}
+.homeHighlights p{
+  margin: 20px 0;
+  line-height:1.5em;
+  color: rgb(60, 60, 60);
+}
+
+.homeHighlights ul li{
+  font-size: 20px;
+  line-height: 1.5em;
+  margin: 15px 0;
+  & a{
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.homeHighlights .btnExporeMore{
+  display: block;
+  margin: 30px auto 0;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(68, 129, 241, 0.973);
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+}

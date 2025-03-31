@@ -1,0 +1,80 @@
+.homeBoxContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 20px;
+    margin: 30px 20px;
+
+}
+
+.homeBox{
+    background-color:rgb(223, 220, 220) ;
+    padding:60px 30px;
+    border-radius: 10px;
+    transition: all 300ms;
+}
+.homeBox:hover{
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+.homeBox .titleLink{
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(0, 93, 231);
+    & svg{
+        color: rgb(245, 158, 29);
+        font-size: 1.5em;
+    }
+}
+
+
+.homeBox ul{
+    list-style: none;
+    padding-left: 0;
+    margin:30px 0;
+}
+.homeBox ul li{
+    margin: 20px 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 300ms;
+    & svg{
+        color: rgb(245, 158, 29);
+        font-size: 16px;
+    }
+    & a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+}
+.homeBox ul li:hover{
+    transform: translateX(10px);
+}
+
+
+.btnViewMore{
+    margin-left:20px;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: thin;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: white;
+    transition: all 300ms;
+    background: linear-gradient(45deg,rgb(83, 155, 248),rgb(1, 0, 87));
+}
+.btnViewMore:hover{
+    scale: 1.05;
+}
+
+
+@media screen and (max-width:440px) {
+    .homeBoxContainer{
+        margin: 30px 10px;
+        grid-template-columns:1fr;
+    }
+}

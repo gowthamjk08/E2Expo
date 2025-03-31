@@ -1,0 +1,84 @@
+.eventsBanner{
+    padding: 120px 40px;
+    background:url('../src/assets/img/hero.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 100;
+}
+
+.eventsBanner::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.eventsBanner h2{
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 800;
+    color: white;
+}
+
+.eventsBanner h3{
+    color:rgb(255, 255, 67);
+    font-weight:600;
+    margin: 30px 0px 20px;
+    font-size: 32px;
+}
+
+.eventsBanner p{
+    font-size: 20px;
+    color: white;
+    font-weight: thin;
+}
+
+/* Filter ssection  */
+
+.filterContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    margin:60px auto;
+    padding: 10px 20px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+.filterContainer h3{
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+.filterContainer h4{
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 20px 0 ;
+    color: var(--primary);
+}
+
+.filterContainer select{
+    padding:5px 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.filterImg{
+    background: linear-gradient(50deg,rgb(160, 158, 158),rgb(65, 65, 65));
+    padding:15px 30px;
+    border-radius: 10px;
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.filterContainer .filterImg img{
+    width:60px;
+    display: inline-block;
+    margin-right: 20px;
+}
